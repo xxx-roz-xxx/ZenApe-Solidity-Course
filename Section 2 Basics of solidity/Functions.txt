@@ -1,0 +1,5 @@
+This file will be for basic and most useful functions
+
+1. if statements. These are written as "if (condition) {thing that you run if true} else {thing that you run if false}"
+
+2. for statements. These are written as "for (conditon) {thing to run multiple times while the conditution is true}"

@@ -49,6 +49,32 @@ contract Basics {
 
     }
 
+
+    function getFib2(uint256 x) public returns (uint256){
+
+        if (x == 1) {
+            endValue = 1;
+        }
+
+        else if (x == 2) {
+            endValue = 1;
+        }
+        else {
+            endValue = getFib2(x - 1) + getFib2(x - 2);
+        }
+
+
+
+        return endValue;
+
+
+    } 
+
+
+
+
+    
+
     function retrieve() public view returns (uint256){
         return endValue;
     }
