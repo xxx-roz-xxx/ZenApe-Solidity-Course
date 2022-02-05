@@ -33,6 +33,25 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "addressAmmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "newOwner",
 						"type": "address"
 					}
@@ -40,6 +59,13 @@
 				"name": "changeOwner",
 				"outputs": [],
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getEth",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
@@ -53,6 +79,32 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "retrieve",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sendEth",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			}
 		],
@@ -102,11 +154,11 @@
 	},
 	"sources": {
 		"Section 2 Basics of solidity/Owner.sol": {
-			"keccak256": "0xa140e318c0e77bfc7a954653a04e65ca2085b37a4e66a33dd23572b3b786b4ce",
+			"keccak256": "0xe34f52bb75653dce348a00938478469aee8a80d90f631b0fc7a1ec52929994cf",
 			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://707fc0dcab5247a461d78baca03daecc88d74e5b6502dacd7059623f74ddef6e",
-				"dweb:/ipfs/QmQERuB4PdrNyMfua66NvPL1reT6XB6JM3nak41s6rpScx"
+				"bzz-raw://07fa5d097d32806903aeb7cedba875e01718181a22123673f13e7e3abe8ae961",
+				"dweb:/ipfs/QmSyjYQDPT6ADhBCM3BcZP4g4HA3DXa6q4WZQHju6u2BvJ"
 			]
 		}
 	},

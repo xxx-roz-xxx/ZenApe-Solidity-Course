@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity >=0.7.0 <0.9.0;
+pragma solidity >=0.6.0 <0.9.0;
 
 /**
  * @title Owner
@@ -9,6 +9,10 @@ pragma solidity >=0.7.0 <0.9.0;
 contract Owner {
 
     address private owner;
+
+    address[] senderArray;
+
+    mapping(address => uint256) public addressAmmount;
     
     // event for EVM logging
     event OwnerSet(address indexed oldOwner, address indexed newOwner);
@@ -41,11 +45,25 @@ contract Owner {
         owner = newOwner;
     }
 
+    function sendEth() payable public {
+        senderArray.push(msg.sender);
+        addressAmmount[msg.sender] += msg.value;
+
+    }
+
+    function retrieve(uint256 index) public view returns (address){
+        return senderArray[index];
+    }
+
     /**
      * @dev Return owner address 
      * @return address of owner
      */
     function getOwner() external view returns (address) {
         return owner;
+    }
+
+    function getEth() payable public {
+        payable(msg.sender).transfer(address(this).balance);
     }
 }
